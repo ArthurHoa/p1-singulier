@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Client
+config.txt
+commandes.csv
+badges.csv
+
+# Serveur
+config.h
