@@ -21,7 +21,7 @@ class MainWindow:
         self.root = tk.Tk()
         self.root.title("P1-Singulier - Gestion des Boîtes à Pain")
         self.root.geometry("1500x1000")
-        self.root.minsize(900, 600)
+        self.root.minsize(800, 500)
         
         # Configuration du style
         self.root.configure(bg="#f0f0f0")
