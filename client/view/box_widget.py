@@ -18,7 +18,7 @@ class BoxWidget(tk.Frame):
     COLORS = {
         BoxStatus.EMPTY: "#4CAF50",      # Vert - Disponible
         BoxStatus.LOADED: "#2196F3",     # Bleu - Chargée, en attente
-        BoxStatus.RETRIEVED: "#4CAF50",  # Vert - Récupérée par client
+        BoxStatus.RETRIEVED: "#2A6B2C",  # Vert - Récupérée par client
         BoxStatus.OCCUPIED: "#BB7000",   # Orange - Récupérée (non utilisé)
         BoxStatus.RESERVED: "#BDBDBD",   # Gris - Réservée
         BoxStatus.ERROR: "#9E9E9E",      # Gris - Erreur

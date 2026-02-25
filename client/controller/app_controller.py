@@ -579,8 +579,8 @@ class AppController:
                 
                 date_str = log_datetime.strftime("%d/%m/%Y")
                 
-                # Convertir le badge décimal en hexadécimal
-                badge_hex = hex(int(badge_decimal))[2:].upper()
+                # Convertir le badge décimal en hexadécimal (toujours 8 caractères)
+                badge_hex = f"{int(badge_decimal):08X}"
                 
                 # Chercher le nom du client dans badge_list
                 client_name = badge_hex  # Par défaut, on garde le badge en hexa

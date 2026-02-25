@@ -69,7 +69,7 @@ void open_door(int i) {
        Serial.print("Failed to write coil! ");
        Serial.println(ModbusRTUClient.lastError());
       }
-      delay(200);
+      delay(300);
       if(!ModbusRTUClient.coilWrite(1,i,0x00)) {
        Serial.print("Failed to write coil! ");
        Serial.println(ModbusRTUClient.lastError());
@@ -261,7 +261,9 @@ void readClient() {
           }   
           else if (c == 'a') { // open ALL
             for (int i = 0; i < NB_CASIERS; i++) {
-              open_door(i);
+              if (tags[i] != 0) { // Ouvrir seulement si un badge est assigné
+                open_door(i);
+              }
             }
           }
           else if (c == 'c') { // load CASIERS
